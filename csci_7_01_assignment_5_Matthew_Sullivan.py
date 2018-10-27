@@ -25,7 +25,7 @@ while replay == "y":
         print("\tYou Guessed Tails")
     else:
         incorrect_answers += 1
-        print("\tYou Guessed '%s'. This was not an option"% users_guess)
+        print("\tYou Guessed '%s'. Which is incorrect"% users_guess)
 
 # Heads
     if coin_toss_result == 0:
