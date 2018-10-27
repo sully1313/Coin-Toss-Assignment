@@ -24,6 +24,7 @@ while replay == "y":
     elif users_guess == "T":
         print("\tYou Guessed Tails")
     else:
+        incorrect_answers += 1
         print("\tYou Guessed '%s'. This was not an option"% users_guess)
 
 # Heads
