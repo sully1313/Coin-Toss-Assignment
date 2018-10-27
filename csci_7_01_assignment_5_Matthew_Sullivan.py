@@ -14,9 +14,9 @@ while replay == "y":
 
     print("\n\tGuess whether the Coin is a Heads or a Tails")
     users_guess = str(input("\n\tEnter 'H' for Heads OR 'T' for Tails: ")).upper()
-    print(users_guess)
-
+    coin_toss_result = coin_toss()
     times_played += 1
+
 
 # print users guess
     if users_guess == "H":
@@ -24,10 +24,10 @@ while replay == "y":
     elif users_guess == "T":
         print("\tYou Guessed Tails")
     else:
-        print("\tYou Guessed '%s'. This was not one of the options"% users_guess)
-        
+        print("\tYou Guessed '%s'. This was not an option"% users_guess)
+
 # Heads
-    if coin_toss() == 0:
+    if coin_toss_result == 0:
         heads_tossed += 1
         print("\tToss #%d - Heads Tossed"% times_played)
         if users_guess == "H":
@@ -37,7 +37,7 @@ while replay == "y":
             incorrect_answers += 1
             print("\tSorry. Incorrect Guess! You guessed: 'T'")
 # Tails
-    elif coin_toss() == 1:
+    elif coin_toss_result == 1:
         tails_tossed += 1
         print("\tToss #%d - Tails Tossed"% times_played)
         if users_guess == "T":
